@@ -24,7 +24,7 @@
     }
 
     function findLetter(letter) {
-        letter.toLowerCase();
+        letter = letter.toLowerCase();
         for (j = 0; j < alphabet.length; j++) {
             if (letter == alphabet[j]) {
                 return j;
