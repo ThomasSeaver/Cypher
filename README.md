@@ -10,10 +10,10 @@
         var output = "";
 
         words.forEach(function(item, index, array) {
-          output.concat(item[0]);
+          output.concat(item.charAt(0));
           output.concat("oi ");
-          output.concat(alphabet[((findLetter(item[0]) + 14)%26)]);
-          output.concat(item[0].substr(1));
+          output.concat(alphabet[((findLetter(item.charAt(0)) + 14)%26)]);
+          output.concat(item.substr(1));
           output.concat(" ");
         });
 
