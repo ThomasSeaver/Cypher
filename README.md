@@ -21,7 +21,7 @@
         outTB.innerHTML = output;
     }
 
-    function findLetter(var letter) {
+    function findLetter(letter) {
         for (i = 0; i < alphabet.length; i++) {
             if (letter == alphabet[i]) {
                 return i;
