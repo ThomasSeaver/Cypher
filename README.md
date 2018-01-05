@@ -39,14 +39,25 @@
 
     function decode()
     {
-        var inTB = document.getElementById("input");
+        document.getElementById("output").innerHTML = document.getElementById("input").value.replace(/[A-Za-z]oi [A-Za-z]/, replacer)
+
+        /*var inTB = document.getElementById("input");
         var input = inTB.innerHTML;
 
-        var output = "Yah dummy decoding isnt done yet!!!!! what are you doing!!!!!";
+        output
 
         var outTB = document.getElementById("output");
-        outTB.innerHTML = output;
+        outTB.innerHTML = output;*/
     }
+    function replacer(match, p1, offset, string) {
+        const [first, second, ...rest] = match;
+        if (((first.charCodeAt(0) - 97 + 14) % 26 + 97) == second.charCodeAt(0)) {
+            return first;
+        } else {
+            return match;
+        }
+    }
+}
 </script>
 <h1>This is where we do the stupid stupid cyphering boys step right up step right up</h1>
 <textarea id = "input">
