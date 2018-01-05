@@ -57,7 +57,6 @@
             return match;
         }
     }
-}
 </script>
 <h1>This is where we do the stupid stupid cyphering boys step right up step right up</h1>
 <textarea id = "input">
