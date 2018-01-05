@@ -39,7 +39,7 @@
 
     function decode()
     {
-        document.getElementById("output").innerHTML = document.getElementById("input").value.replace(/[A-Za-z]oi [A-Za-z]/, replacer)
+        document.getElementById("output").innerHTML = document.getElementById("input").value.replace(/[A-Za-z]oi [A-Za-z]/, replacer);
 
         /*var inTB = document.getElementById("input");
         var input = inTB.innerHTML;
