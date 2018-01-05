@@ -54,7 +54,7 @@
         console.log("replace");
         const [first, second, ...rest] = match;
         console.log(first + second);
-        if (((first.charCodeAt(0) - 97 + 14) % 26 + 97) == second.charCodeAt(0)) {
+        if (((first.charCodeAt(0) - 97 + 14) % 26 + 97) == first.charCodeAt(1)) {
             return first;
         } else {
             return match;
