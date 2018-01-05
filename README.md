@@ -51,11 +51,9 @@
         outTB.innerHTML = output;*/
     }
     function replacer(match, p1, p2, p3, offset, string) {
-        console.log("replace");
-        const [first, second, ...rest] = match;
         console.log(p1 + p3);
-        if (((first.charCodeAt(0) - 97 + 14) % 26 + 97) == first.charCodeAt(1)) {
-            return first;
+        if (((p1.charCodeAt(0) - 97 + 14) % 26 + 97) == p3.charCodeAt(0)) {
+            return p1;
         } else {
             return match;
         }
