@@ -4,8 +4,7 @@
     {
         var inTB = document.getElementById("input");
         var input = inTB.value;
-        var lowerIn = input.toLowerCase();
-        var words = lowerIn.split(" ");
+        var words = input.split(" ");
         var output = "";
         console.log(words.length);
         var curWord;
@@ -25,6 +24,7 @@
     }
 
     function findLetter(letter) {
+        letter.toLowerCase();
         for (j = 0; j < alphabet.length; j++) {
             if (letter == alphabet[j]) {
                 return j;
