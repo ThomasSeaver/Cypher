@@ -53,7 +53,7 @@
     function replacer(match, p1, offset, string) {
         console.log("replace");
         const [first, second, ...rest] = match;
-        console.log(first + second);
+        console.log(first + second + first.charAt(1));
         if (((first.charCodeAt(0) - 97 + 14) % 26 + 97) == first.charCodeAt(1)) {
             return first;
         } else {
