@@ -45,7 +45,9 @@
     }
 </script>
 <h1>This is where we do the stupid stupid cyphering boys step right up step right up</h1>
-<input type = "text" value = "Input for coding/decoding" id = "input">
+<textarea id = "input">
+Place to add text to be cyphered
+</textarea>
 <br>
 <input type = "button" value = "Encode the input" onclick = "encode();">
 <input type = "button" value = "Decode the input" onclick = "decode();">
