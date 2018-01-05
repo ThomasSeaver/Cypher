@@ -23,6 +23,8 @@ function encode()
 }
 </script>
 <input type = "text" value = "Input for coding/decoding" id = "input">
+<br>
 <input type = "button" value = "Encode the input" onclick = "encode();">
 <input type = "button" value = "Decode the input" onclick = "decode();">
+<br>
 <input type = "text" id = "output">
