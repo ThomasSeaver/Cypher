@@ -16,6 +16,8 @@
                     output += (alphabet[((findLetter(words[i].charAt(0)) + 14)%26)]);
                     output += (words[i].substr(1));
                     output += (" ");
+                } else {
+                    output += words[i];
                 }
             }
             output += "\n";
