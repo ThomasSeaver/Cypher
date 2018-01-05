@@ -9,13 +9,13 @@
         console.log(words.length);
         var curWord;
         for (i = 0; i < words.length; i++){
-            curWord = words[i];
-            output += (curWord.charAt(0));
-            output += ("oi ");
-            output += (alphabet[((findLetter(words[i].charAt(0)) + 14)%26)]);
-            output += (words[i].substr(1));
-            output += (" ");
-            console.log(i);
+            if (!words[i].length < 2 && !findLetter(words[i].charAt(0)) == -1) {
+                output += (words[i].charAt(0));
+                output += ("oi ");
+                output += (alphabet[((findLetter(words[i].charAt(0)) + 14)%26)]);
+                output += (words[i].substr(1));
+                output += (" ");
+            }
         }
 
         var outTB = document.getElementById("output");
