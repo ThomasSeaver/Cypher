@@ -5,13 +5,29 @@
     {
         var inTB = document.getElementById("input");
         var input = inTB.innerHTML;
-        input.toLowerCase();
-        input.split(" ");
+        var lowerIn = input.toLowerCase();
+        var words = lowerIn.split(" ");
+        var output = "";
 
-        var output = input;
+        words.forEach(function(item, index, array) {
+          output.concat(item[0]);
+          output.concat("oi ");
+          output.concat(alphabet[((findLetter(item[0]) + 14)%26)]);
+          output.concat(item[0].substr(1));
+          output.concat(" ");
+        });
 
         var outTB = document.getElementById("output");
         outTB.innerHTML = output;
+    }
+
+    function findLetter(var letter) {
+        for (i = 0; i < alphabet.length; i++) {
+            if (letter == alphabet[i]) {
+                return i;
+            }
+        }
+        return -1;
     }
 
     function decode()
