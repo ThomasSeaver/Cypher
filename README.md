@@ -3,7 +3,7 @@
     function encode()
     {
         var inTB = document.getElementById("input");
-        var input = inTB.value;
+        var input = inTB.innerHTML;
         var lowerIn = input.toLowerCase();
         var words = lowerIn.split(" ");
         var output = "";
@@ -38,13 +38,16 @@
         var inTB = document.getElementById("input");
         var input = inTB.innerHTML;
 
-        var output = input;
+        var output = "Yah dummy decoding isnt done yet!!!!! what are you doing!!!!!";
 
         var outTB = document.getElementById("output");
         outTB.innerHTML = output;
     }
 </script>
-<input type = "text" value = "Input for coding/decoding" id = "input">
+<h1>This is where we do the stupid stupid cyphering boys step right up step right up</h1>
+<textarea id = "input">
+Enter input for coding/decoding here
+</textarea>
 <br>
 <input type = "button" value = "Encode the input" onclick = "encode();">
 <input type = "button" value = "Decode the input" onclick = "decode();">
