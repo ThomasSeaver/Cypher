@@ -19,6 +19,7 @@
 
         var outTB = document.getElementById("output");
         outTB.innerHTML = output;
+        console.log(output);
     }
 
     function findLetter(letter) {
