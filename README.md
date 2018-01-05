@@ -4,18 +4,22 @@
     {
         var inTB = document.getElementById("input");
         var input = inTB.value;
-        var words = input.split(" ");
+        var area = input.split(/\r|\n/);
+        var words;
         var output = "";
-        for (i = 0; i < words.length; i++){
-            if (words[i].length >= 2 && findLetter(words[i].charAt(0)) != -1) {
-                output += (words[i].charAt(0));
-                output += ("oi ");
-                output += (alphabet[((findLetter(words[i].charAt(0)) + 14)%26)]);
-                output += (words[i].substr(1));
-                output += (" ");
+        for (k = 0; k < area.length; k++) {
+            words = area[k].split(" ");
+            for (i = 0; i < words.length; i++){
+                if (words[i].length >= 2 && findLetter(words[i].charAt(0)) != -1) {
+                    output += (words[i].charAt(0));
+                    output += ("oi ");
+                    output += (alphabet[((findLetter(words[i].charAt(0)) + 14)%26)]);
+                    output += (words[i].substr(1));
+                    output += (" ");
+                }
             }
+            output += "\n";
         }
-
         var outTB = document.getElementById("output");
         outTB.innerHTML = output;
         console.log(output);
