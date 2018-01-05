@@ -1,14 +1,28 @@
 # Cypher
 <script>
-function myFunction()
+function encode()
 {
-    var tB=document.getElementById("myTextBox");
-    tB.innerHTML = "mohteurfkalca";
+    var inTB = document.getElementById("input");
+    var input = inTB.innerHTML;
+
+    var output = input;
+
+    var outTB = document.getElementById("output");
+    outTB.innerHTML = output;
+}
+
+function encode()
+{
+    var inTB = document.getElementById("input");
+    var input = inTB.innerHTML;
+
+    var output = input;
+
+    var outTB = document.getElementById("output");
+    outTB.innerHTML = output;
 }
 </script>
-testing testing
-#testing testing
-<textarea id="myTextBox" cols="50" rows="5">
-This textbox has been given a name of "myTextBox". This can be used by any script that process the contents of this textbox (once it's been submitted to the server).
-</textarea>
-<input type="button" value="Capacity Chart" onclick="myFunction();">
+<input type = "text" value = "Input for coding/decoding" id = "input">
+<input type = "button" value = "Encode the input" onclick = "encode();">
+<input type = "button" value = "Decode the input" onclick = "decode();">
+<input type = "text" id = "output">
