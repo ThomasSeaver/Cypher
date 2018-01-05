@@ -59,13 +59,13 @@
     }
 </script>
 <h1>This is where we do the stupid stupid cyphering boys step right up step right up</h1>
-<textarea id = "input" cols = "100" rows = "200">
+<textarea id = "input" cols = "10" rows = "20">
 Place to add text to be cyphered
 </textarea>
 <br>
 <input type = "button" value = "Encode the input" onclick = "encode();">
 <input type = "button" value = "Decode the input" onclick = "decode();">
 <br>
-<textarea id = "output" cols = "100" rows = "200">
+<textarea id = "output" cols = "10" rows = "20">
 
 </textarea>
