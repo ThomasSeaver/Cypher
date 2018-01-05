@@ -6,10 +6,8 @@
         var input = inTB.value;
         var words = input.split(" ");
         var output = "";
-        console.log(words.length);
-        var curWord;
         for (i = 0; i < words.length; i++){
-            if (!words[i].length < 2 && !findLetter(words[i].charAt(0)) == -1) {
+            if (words[i].length >= 2 && findLetter(words[i].charAt(0)) != -1) {
                 output += (words[i].charAt(0));
                 output += ("oi ");
                 output += (alphabet[((findLetter(words[i].charAt(0)) + 14)%26)]);
