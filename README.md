@@ -39,7 +39,8 @@
 
     function decode()
     {
-        document.getElementById("output").innerHTML = document.getElementById("input").value.replace(/[A-Za-z]oi [A-Za-z]/, replacer);
+        console.log("decode");
+        document.getElementById("output").innerHTML = document.getElementById("input").value.replace(/\woi \w/, replacer);
 
         /*var inTB = document.getElementById("input");
         var input = inTB.innerHTML;
@@ -50,7 +51,9 @@
         outTB.innerHTML = output;*/
     }
     function replacer(match, p1, offset, string) {
+        console.log("replace");
         const [first, second, ...rest] = match;
+        console.log(first + second);
         if (((first.charCodeAt(0) - 97 + 14) % 26 + 97) == second.charCodeAt(0)) {
             return first;
         } else {
