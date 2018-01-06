@@ -39,19 +39,9 @@
 
     function decode()
     {
-        console.log("decode");
         document.getElementById("output").innerHTML = document.getElementById("input").value.replace(/(\w)(oi )(\w)/, replacer);
-
-        /*var inTB = document.getElementById("input");
-        var input = inTB.innerHTML;
-
-        output
-
-        var outTB = document.getElementById("output");
-        outTB.innerHTML = output;*/
     }
     function replacer(match, p1, p2, p3, offset, string) {
-        console.log(p1 + p3);
         if (((p1.charCodeAt(0) - 97 + 14) % 26 + 97) == p3.charCodeAt(0)) {
             return p1;
         } else {
