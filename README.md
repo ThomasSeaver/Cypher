@@ -4,7 +4,7 @@
     function encode()
     {
         if (document.getElementById("random").checked == true) {
-            enodeRandom();
+            encodeRandom();
         } else {
             caesar(0);
         }
