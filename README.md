@@ -19,7 +19,7 @@
         }
     }
 
-    function caesar(int path)
+    function caesar(path)
     {
         var shift = document.getElementById("shift").value;
         if (shift == null) {
