@@ -31,7 +31,7 @@
         var input = document.getElementById("input").value;
         var inputCharCode;
         var output = "";
-        for (i = 0; i < value.length; i++) {
+        for (i = 0; i < input.length; i++) {
             inputCharCode = input.charCodeAt(i);
             if (inputCharCode > 64 && inputCharCode < 91) {
                 output += "&";
