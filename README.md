@@ -35,8 +35,8 @@
             inputCharCode = input.charCodeAt(i);
             if (inputCharCode > 64 && inputCharCode < 91) {
                 outputCharCode = inputCharCode + shift;
-                if (outputCharCode < 65) outputCharCode = ((outputCharCode - 64) % 26) + 26 + 64;
-                if (outputCharCode > 90) outputCharCode = ((outputCharCode - 64) % 26) + 64;
+                if (outputCharCode < 65) outputCharCode = ((outputCharCode - 65) % 26) + 26 + 65;
+                if (outputCharCode > 90) outputCharCode = ((outputCharCode - 65) % 26) + 65;
                 console.log(outputCharCode);
             } else if (inputCharCode > 96 && inputCharCode < 123) {
                 outputCharCode = inputCharCode + shift;
