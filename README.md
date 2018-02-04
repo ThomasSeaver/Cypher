@@ -18,6 +18,7 @@
                     output += (" ");
                 } else {
                     output += words[i];
+                    output += " ";
                 }
             }
             output += "\n";
