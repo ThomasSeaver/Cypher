@@ -4,7 +4,7 @@
     function encode()
     {
         if (document.getElementById("random").checked == true) {
-            decodeRandom();
+            enodeRandom();
         } else {
             caesar(0);
         }
@@ -41,6 +41,7 @@
                 output += input.charAt(i);
             }
         }
+        document.getElementById("output").innerHTML = output;
     }
 
     function encodeRandom()
@@ -75,7 +76,6 @@
         }
         var outTB = document.getElementById("output");
         outTB.innerHTML = output;
-        console.log(output);
     }
 
     function findLetter(letter) {
