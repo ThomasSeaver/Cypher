@@ -1,6 +1,49 @@
 <script>
     var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+
     function encode()
+    {
+        if (document.getElementById("random").checked == true) {
+            decodeRandom();
+        } else {
+            caesar(0);
+        }
+    }
+
+    function decode()
+    {
+        if (document.getElementById("random").checked == true) {
+            decodeRandom();
+        } else {
+            caesar(1);
+        }
+    }
+
+    function caesar(int path)
+    {
+        var shift = document.getElementById("shift").value;
+        if (shift == null) {
+            shift = 0;
+        }
+        if (path == 1) {
+            shift *= -1;
+        }
+        var input = document.getElementById("input").value;
+        var inputCharCode;
+        var output = "";
+        for (i = 0; i < value.length; i++) {
+            inputCharCode = input.charCodeAt(i);
+            if (inputCharCode > 64 && inputCharCode < 91) {
+                output += "&";
+            } else if (inputCharCode > 96 && inputCharCode < 123) {
+                output += "%";
+            } else {
+                output += input.charAt(i);
+            }
+        }
+    }
+
+    function encodeRandom()
     {
         var inTB = document.getElementById("input");
         var input = inTB.value;
@@ -45,7 +88,7 @@
         return -1;
     }
 
-    function decode()
+    function decodeRandom()
     {
         document.getElementById("output").innerHTML = document.getElementById("input").value.replace(/(\w)(oi )(\w)/g, replacer);
     }
@@ -58,13 +101,15 @@
         }
     }
 </script>
-<h1>This is where we do the stupid stupid cyphering boys step right up step right up</h1>
+<h1>Simple Caesar Cipher with a random mode</h1>
 <textarea id = "input" cols = "70" rows = "15">
 Place to add text to be cyphered
 </textarea>
 <br>
 <input type = "button" value = "Encode the input" onclick = "encode();">
 <input type = "button" value = "Decode the input" onclick = "decode();">
+<input type = "number" id = "shift">
+<input type = "checkbox" id = "random">
 <br>
 <textarea id = "output" cols = "70" rows = "15">
 
