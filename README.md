@@ -40,8 +40,8 @@
                 console.log(outputCharCode);
             } else if (inputCharCode > 96 && inputCharCode < 123) {
                 outputCharCode = inputCharCode + shift;
-                if (outputCharCode < 97) outputCharCode = ((outputCharCode - 96) % 26) + 26 + 96;
-                if (outputCharCode > 122) outputCharCode = ((outputCharCode - 96) % 26) + 96;
+                if (outputCharCode < 97) outputCharCode = ((outputCharCode - 97) % 26) + 26 + 97;
+                if (outputCharCode > 122) outputCharCode = ((outputCharCode - 97) % 26) + 97;
                 console.log(outputCharCode);
             } else {
                 outputCharCode = inputCharCode;
