@@ -21,10 +21,8 @@
 
     function caesar(path)
     {
-        var shift = document.getElementById("shift").value;
-        if (shift == null) {
-            shift = 0;
-        }
+        var shift = 0;
+        shift += document.getElementById("shift").value;
         if (path == 1) {
             shift *= -1;
         }
