@@ -35,13 +35,13 @@
             inputCharCode = input.charCodeAt(i);
             if (inputCharCode > 64 && inputCharCode < 91) {
                 outputCharCode = inputCharCode + shift;
-                if (outputCharCode < 65) outputCharCode += 26;
-                if (outputCharCode > 90) outputCharCode -= 26;
+                if (outputCharCode < 65) outputCharCode = ((outputCharCode - 64) % 26) + 26 + 64;
+                if (outputCharCode > 90) outputCharCode = ((outputCharCode - 64) % 26) + 64;
                 console.log(outputCharCode);
             } else if (inputCharCode > 96 && inputCharCode < 123) {
                 outputCharCode = inputCharCode + shift;
-                if (outputCharCode < 97) outputCharCode += 26;
-                if (outputCharCode > 122) outputCharCode -= 26;
+                if (outputCharCode < 97) outputCharCode = ((outputCharCode - 96) % 26) + 26 + 96;
+                if (outputCharCode > 122) outputCharCode = ((outputCharCode - 96) % 26) + 96;
                 console.log(outputCharCode);
             } else {
                 outputCharCode = inputCharCode;
