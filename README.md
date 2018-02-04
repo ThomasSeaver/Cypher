@@ -30,16 +30,23 @@
         }
         var input = document.getElementById("input").value;
         var inputCharCode;
+        var outputCharCode
         var output = "";
         for (i = 0; i < input.length; i++) {
             inputCharCode = input.charCodeAt(i);
             if (inputCharCode > 64 && inputCharCode < 91) {
-                output += "&";
+                outputCharCode = inputCharCode + shift;
+                if (outputCharCode < 65) outputCharCode += 26;
+                if (outputCharCode > 90) outputCharCode -= 26;
+
             } else if (inputCharCode > 96 && inputCharCode < 123) {
-                output += "%";
+                outputCharCode = inputCharCode + shift;
+                if (outputCharCode < 97) outputCharCode += 26;
+                if (outputCharCode > 122) outputCharCode -= 26;
             } else {
-                output += input.charAt(i);
+                outputCharCode = inputCharCode;
             }
+            output += String.fromCharCode(outputCharCode);
         }
         document.getElementById("output").innerHTML = output;
     }
