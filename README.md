@@ -28,6 +28,7 @@
         if (path == 1) {
             shift *= -1;
         }
+        console.log(shift);
         var input = document.getElementById("input").value;
         var inputCharCode;
         var outputCharCode
@@ -38,11 +39,12 @@
                 outputCharCode = inputCharCode + shift;
                 if (outputCharCode < 65) outputCharCode += 26;
                 if (outputCharCode > 90) outputCharCode -= 26;
-
+                console.log(outputCharCode);
             } else if (inputCharCode > 96 && inputCharCode < 123) {
                 outputCharCode = inputCharCode + shift;
                 if (outputCharCode < 97) outputCharCode += 26;
                 if (outputCharCode > 122) outputCharCode -= 26;
+                console.log(outputCharCode);
             } else {
                 outputCharCode = inputCharCode;
             }
@@ -118,6 +120,6 @@ Place to add text to be cyphered
 <input type = "number" id = "shift">
 <input type = "checkbox" id = "random">
 <br>
-<textarea id = "output" cols = "70" rows = "15">
+<textarea id = "output" cols = "70" rows = "15" readonly>
 
 </textarea>
