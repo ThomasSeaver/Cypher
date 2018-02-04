@@ -30,8 +30,8 @@
         }
         console.log(shift);
         var input = document.getElementById("input").value;
-        var inputCharCode;
-        var outputCharCode
+        var inputCharCode = 0;
+        var outputCharCode = 0;
         var output = "";
         for (i = 0; i < input.length; i++) {
             inputCharCode = input.charCodeAt(i);
