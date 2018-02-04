@@ -40,7 +40,7 @@
 
     function decode()
     {
-        document.getElementById("output").innerHTML = document.getElementById("input").value.replace(/(\w)(oi )(\w)/, replacer);
+        document.getElementById("output").innerHTML = document.getElementById("input").value.replace(/(\w)(oi )(\w)/g, replacer);
     }
     function replacer(match, p1, p2, p3, offset, string) {
         if (((p1.charCodeAt(0) - 97 + 14) % 26 + 97) == p3.charCodeAt(0)) {
