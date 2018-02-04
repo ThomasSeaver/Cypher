@@ -16,6 +16,13 @@
                     output += (alphabet[((findLetter(words[i].charAt(0)) + 14)%26)]);
                     output += (words[i].substr(1));
                     output += (" ");
+                } else if (words[i].length >= 3 && findLetter(words[i].charAt(1)) != -1) {
+                    output += (words[i].charAt(0));
+                    output += (words[i].charAt(1));
+                    output += ("oi ");
+                    output += (alphabet[((findLetter(words[i].charAt(0)) + 14)%26)]);
+                    output += (words[i].substr(1));
+                    output += (" ");
                 } else {
                     output += words[i];
                     output += " ";
@@ -43,7 +50,7 @@
         document.getElementById("output").innerHTML = document.getElementById("input").value.replace(/(\w)(oi )(\w)/g, replacer);
     }
     function replacer(match, p1, p2, p3, offset, string) {
-        if (((p1.charCodeAt(0) - 97 + 14) % 26 + 97) == p3.charCodeAt(0)) {
+        if (((p1.charCodeAt(0) - 97 + 14) % 26 + 97).toLowerCase() == p3.charCodeAt(0)) {
             return p1;
         } else {
             return match;
